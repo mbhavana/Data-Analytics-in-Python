@@ -1,28 +1,44 @@
-# External-merge-sort
+# Data Analytics in Python
 
-main.c source code has all other required source code files included.
-randomizedQuickSort.c is the base line program which reads all the contents in the file without memory limit. 
- quicksort.c is naïve sorting program which is used in sorting phase for external merge sort. It creates a temporary file which is given as input to merge phase.
-heapify.c program builds by rearranging heap structure of all the records during merge phase.
-heapsort.c performs heap sort at the beginning of External merge sort.
-Ext_merge_sort.c reads blocks of data within memory limit and merges them. The output is written to output file specified by user.
-2.	Makefile contains shell commands required for execution. This creates two executable files: program1 program2
-Execution of program
-At the prompt type:
-$ make
-2.	The execution of above command gives a message:
-Complier named: program has been compiled
-3.	Give the following command at the prompt:
-./program1 extsort.input output_file1 order memory_limit
-./program2 extsort.input output_file2 order memory_limit
+## Description of program
+Data set used in this program is obtained from:
+[http://vincentarelbundock.github.io/Rdatasets/datasets.html]
 
-4.	First argument is name of your input file.
-5.	Second argument is name of your output file which contains external merge sort records.
-6.	Third argument is order in which records should be sorted.
-Give value 0 for ascending order.
-Give value 1 for descending order.
-           7.   Fourth argument is the memory limit. 
+### Descirption
+Data set is about a Drug Treatment conducted on white's and Non-white's who used Heroin, Cocain, Heroin & Cocain, Drug IV three months prior to treatment and their treatment details. The dataset contains type of drug used white's and Non-white's.Number of treatments , treatment randomisation and length of treatment and time taken for drug to relapse from the date of treatment is given . The dataset also shows if the person has returned to drug after the treatment or not.
 
-          
+### Program displays following questions at the prompt:
 
-Data-Analytics-in-Python
+* Find Number of people in the age groups(below 31 years and above 31years) belonging to two race groups who used Various drugs and display them using bar chart.
+* Find Average Beck Deppresion of people different drugs and find out whose beck deppresion is high and display the output in bar chart.
+* Find percentage of people who returned to drugs after treatment and who din't return to drugs. Display the output in pi Chart too.
+* Find Percentage of people whose duration for drug relapse is more than 1 year classified by the drug intake.
+* Find out length of treatament and beck depression of people under different age groups.
+* Find out mean and standard deviation of age groups. Histogram will be displayed according to   the input given by the user.
+
+### Data fields in the data set
+* Age : Age of the person when he or she admitted in the hospital
+* BECK : It is the beck depression score for people depending on type of drud they are addicted to.
+* HC : It is the drug taken by the people. The number in the cells indicate the following
+                     + Heroin and Cocain
+                     + Heroin
+                     + Cocaine
+                     + Neiher of them
+* Drug IV: The number in the cells indicate the following
+                      + Never took
+                      + Previously have taken DRUG IV
+                      + Recently have take that drug
+* NDT : Number of drug treatments
+* race : Race group.
+                      + White's
+                      + Non- White's
+* Treat : Treatment randomisation. The number in the cells indicate the following
+                       + Long
+                       + Short
+* Len.T : Length of treatment in days from the date of admission
+* Time  : Indicate number days taken for the drug to relapse from the date of admission
+* censor : Indicates if the people returned to drugs again after the treatment
+                       * Indicates that they have returned
+                       * They didn't return
+
+
